@@ -1,8 +1,8 @@
 SHELL=/bin/bash
-out=$(CURDIR)/target/aarch64-unknown-linux-musl/debug/hi-wo
+out=$(CURDIR)/target/aarch64-unknown-linux-musl/release/hi-wo
 
 build:
-	cargo build --target=aarch64-unknown-linux-musl
+	PKG_CONFIG_ALLOW_CROSS=1 cargo build --target=aarch64-unknown-linux-musl --release
 
 build-local:
 	cargo build
