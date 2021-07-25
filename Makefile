@@ -12,6 +12,7 @@ release: metabuild
 	$(CURDIR)/build.sh --release --verbose
 
 metabuild:
+	@if [ ! -d "$(local)" ]; then mkdir $(local); fi
 	@touch $(metabuild_hash)
 	@if [ ! -z "`diff <(sha1sum $(metabuild)) $(metabuild_hash)`" ]; then \
 	    LOCAL=$(local) $(metabuild) || exit 1; \
