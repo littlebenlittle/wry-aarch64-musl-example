@@ -1,0 +1,12 @@
+# based on
+# https://github.com/japaric/xargo/issues/133#issuecomment-681194097
+
+[build]
+rustflags = ["-Cembed-bitcode=yes"]
+
+[target.aarch64-unknown-linux-musl]
+linker = "/mnt/.local/aarch64-linux-musl-cross/bin/aarch64-linux-musl-gcc"
+rustflags = [
+	"-L /mnt/.local/aarch64-linux-musl-cross/aarch64-linux-musl/lib",
+	"-Cembed-bitcode=yes",
+]
