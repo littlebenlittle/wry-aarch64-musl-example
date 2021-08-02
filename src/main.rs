@@ -20,7 +20,6 @@ fn main() -> wry::Result<()> {
         .build()?;
     event_loop.run(move |event, _, control_flow| {
         *control_flow = ControlFlow::Wait;
-
         match event {
             Event::NewEvents(StartCause::Init) => println!("Wry has started!"),
             Event::WindowEvent {

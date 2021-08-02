@@ -5,11 +5,8 @@ metabuild=$(CURDIR)/metabuild.sh
 rsync_warning=please set REMOTE_DIR ( hint: source .env )
 metabuild_hash=$(local)/metabuild.sha1
 
-debug: metabuild
-	$(CURDIR)/build.sh --verbose
-
-release: metabuild
-	$(CURDIR)/build.sh --release --verbose
+build: metabuild
+	cross build --target aarch64-unknown-linux-musl
 
 metabuild:
 	@if [ ! -d "$(local)" ]; then mkdir $(local); fi
