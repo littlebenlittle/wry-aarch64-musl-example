@@ -18,11 +18,8 @@ EOF
 source .env
 ```
 
-### Build and Run
+### Build
 
 ```sh
-make release
-make rsync
-ssh $REMOTE_USER
-./test
+make build
 ```
