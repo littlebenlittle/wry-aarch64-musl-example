@@ -8,7 +8,6 @@ trap "buildah rm $ctr" EXIT
 buildah run $ctr apt-get update
 buildah run $ctr apt-get install -y \
 	libwebkit2gtk-4.0-dev \
-	libappindicator3-dev \
 	libgtksourceviewmm-3.0-dev \
 	libc6-dev-i386 \
 	clang
