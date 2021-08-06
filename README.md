@@ -14,6 +14,7 @@ cat >.env <<EOF
 export REMOTE_HOST=10.0.0.123
 export REMOTE_USER=user@\$REMOTE_HOST
 export REMOTE_DIR=\$REMOTE_USER:/home/user
+export LOCAL=\$PWD/.local
 EOF
 source .env
 ```
