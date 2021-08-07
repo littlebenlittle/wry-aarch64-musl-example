@@ -14,7 +14,7 @@ release: metabuild
 metabuild:
 	@if [ ! -d "$(local)" ]; then mkdir $(local); fi
 	@touch $(metabuild_hash)
-	@if [ ! -z "`diff <(sha1sum $(metabuild)) $(metabuild_hash)`" ]; then \
+	@if [ ! -z "`diff <(sha1sum $$(realpath $(metabuild))) $(metabuild_hash)`" ]; then \
 	    LOCAL=$(local) $(metabuild) || exit 1; \
 	    sha1sum $(metabuild) > $(metabuild_hash); \
 	fi
