@@ -1,2 +1,2 @@
 [target.aarch64-unknown-linux-musl]
-image="cross-wry"
+image="cross-wry:armhf"
