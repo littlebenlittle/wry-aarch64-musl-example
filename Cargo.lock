@@ -9,6 +9,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "595d3cfa7a60d4555cb5067b99f07142a08ea778de5cf993f7b75c7d8fabc486"
 
 [[package]]
+name = "app"
+version = "0.1.0"
+dependencies = [
+ "wry",
+]
+
+[[package]]
 name = "atk"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1139,13 +1146,6 @@ dependencies = [
  "unicode-segmentation",
  "winapi",
  "x11-dl",
-]
-
-[[package]]
-name = "test"
-version = "0.1.0"
-dependencies = [
- "wry",
 ]
 
 [[package]]
